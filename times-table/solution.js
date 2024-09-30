@@ -1,7 +1,9 @@
 function printTimesTable(n) {
-  let i = 0;
-  while (i <= n) {
-    console.log(`${i} x ${n} = ${i * 5}`);
-    i++;
+  for (let i = 1; i<=12; i++)
+ {
+    console.log(`${i} x ${n} = ${i * n}`);
+  
   }
 }
+
+printTimesTable(3)

@@ -7,10 +7,10 @@ function convertTemperature(temperature, toUnit, fromUnit) {
   let result;
 
   // Convert based on the fromUnit
-  if (fromUnit === "C" && toUnit === "F") {
-    result = (temperature * 9) / 5 + 32;
-  } else if (fromUnit === "F" && toUnit === "C") {
-    result = ((temperature - 32) * 5) / 9;
+  if (toUnit === "C" && fromUnit === "F") {
+    result = (temperature * (9/5))  + 32;
+  } else if (toUnit === "F" && fromUnit === "C") {
+    result = (temperature - 32) * (5/ 9);
   } else {
     throw new Error("Unsupported unit conversion");
   }
@@ -23,4 +23,4 @@ function convertTemperature(temperature, toUnit, fromUnit) {
 console.log(convertTemperature(0, "C", "F")); // Should output: 32
 console.log(convertTemperature(100, "C", "F")); // Should output: 212
 console.log(convertTemperature(32, "F", "C")); // Should output: 0
-console.log(convertTemperature(98.6, "F", "C")); // Should output: 37
+console.log(convertTemperature(-40, "F", "C")); // Should output: 37
